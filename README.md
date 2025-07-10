@@ -9,10 +9,6 @@ Ce dépôt met en place un système de monitoring basé sur **Prometheus** et **
 
 Stack utilisée dans mon projet d'entreprise pour ma formation 'Administrateur Système DevOps' afin de valider mon bloc de compétence concernant la surveillance d'une application déployée dans le cloud.
 
-## Techno utilisées
+## Requirements
 
-- Prometheus
-- Grafana
-- Github
-- Git
 - Docker
