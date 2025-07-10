@@ -3,11 +3,13 @@ services:
     image: prom/prometheus
     container_name: prometheus
     volumes:
-      - ./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yaml
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
     networks:
       - monitoring
+    extra_hosts:
+      - "host.docker.internal:172.21.0.1"
 
   grafana:
     image: grafana/grafana
@@ -24,4 +26,4 @@ volumes:
 
 networks:
   monitoring:
-    driver: bridge
+    external: true
